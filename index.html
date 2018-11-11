@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<head>
+    <title>ACT Simulation</title>
+    <!--CSS-->
+    <link rel="stylesheet" href="css/style.css">
+    <!--JS-->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src = "js/script.js"></script>
+</head>
+<body id="body">
+    <div class="quiz-container row hid-container" id="quizContainer">
+        <div class="container question-container blue col">
+            <div class="container question-image-container">
+                <img src="images/thirds-question.jpg" class="media" id="questionImg"/>
+            </div>
+            <div class="container answer-container row blue">
+                <a class="anchor-button answer-button unselected-button" id="a">a) 12</a>
+                <a class="anchor-button answer-button unselected-button " id="b">b) 15</a>
+                   <a class="anchor-button answer-button unselected-button" id="c">c) 27</a>
+                <a class="anchor-button answer-button unselected-button" id="d">d) 54</a>
+                <a class="anchor-button answer-button unselected-button" id="e">e) 81</a>
+            </div>
+        </div>
+        <div class="tertiary-container col">
+            <div class="container nav-container col blue">
+                <p>Questions</p>
+                <div class="container nav-button-container row blue padded-container">
+                    <a class="anchor-button nav-button selected-button" id="nav-one">1</a>
+                   <a class="anchor-button nav-button unselected-button" id="nav-two">2</a>
+                    <a class="anchor-button nav-button unselected-button" id="nav-three">3</a>
+                    <a class="anchor-button nav-button unselected-button" id="nav-four">4</a>
+                    <a class="anchor-button nav-button unselected-button" id="nav-five">5</a>
+                </div>
+                <div class="container nav-button-container row padded-container" blue>
+                    <a class="anchor-button nav-button unselected-button" id="nav-six">6</a>
+                    <a class="anchor-button nav-button unselected-button" id="nav-seven">7</a>
+                    <a class="anchor-button nav-button unselected-button" id="nav-eight">8</a>
+                    <a class="anchor-button nav-button unselected-button" id="nav-nine">9</a>
+                    <a class="anchor-button nav-button unselected-button" id="nav-ten">10</a>
+                </div>
+            </div>
+            <div class="container timer blue col">
+                <p>Timer</p>
+                <div class="container nav-button-container row blue">
+                    <p><span id="timer-minutes">15</span>:<span id="timer-seconds">00</span></p>
+                </div>
+            </div>
+            <div class="container timer blue">
+                <div class="container nav-button-container row blue">
+                    <a class="anchor-button unselected-button answer-button" id="submitAnswers">Submit Answers</a>
+                </div>
+            </div>
+        </div>    
+        <div class="container empty-container">
+        </div>
+    </div>
+    <div class="container" id="startContainer">
+        <div class ="container instructions-container">
+            <div class="container col blue padded-container">
+                <p>You will have fifteen minutes to complete ten questions drawn from a real ACT exam. Press begin when you are ready to start.</p>
+                <a class="anchor-button unselected-button start-button" id="startButton">Begin</a>
+            </div>
+        </div>
+    </div>
+    <div class="aligner col hid-container" id="endContainer">
+        <div class ="container instructions-container blue" id="feedbackContainer">
+            <div class="container">
+                <p>Your quiz has completed. Press the button below to see the results.</p>
+                <a class="anchor-button unselected-button start-button" id="resultsButton">See Results</a>
+            </div>
+        </div>
+    </div>
+</body>

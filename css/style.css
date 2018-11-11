@@ -1,0 +1,170 @@
+body {
+    background-color: dimgrey;
+}
+
+
+/* ###### CONTAINERS ###### */
+
+
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    max-height: 700px;
+}
+
+.instructions-container {
+    display: flex;
+    width: 50%;
+    padding: 4em;
+    box-sizing: border-box;
+    margin: auto;
+}
+
+.aligner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.quiz-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.question-container {
+    padding: 5%;
+    order: 2;
+}
+
+.question-image-container {
+    padding: 5px;
+    background-color: white;
+}
+
+.empty-container {
+    flex-basis: 10%;
+    height: 20px;
+    order: 1;
+    background-color: dimgrey;
+    border: dimgrey
+}
+
+.nav-container {
+    flex-basis: 25%;
+    align-self: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border-color: cadetblue;
+}
+
+.nav-button-container {
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.padded-container{
+    padding: 1em;
+}
+
+.col {
+    flex-direction: column;
+}
+
+.row {
+    flex-direction: row;
+}
+
+.tertiary-container {
+    display: flex;
+    order: 3;
+    justify-content: space-around;
+    align-self: flex-start;
+}
+
+.timer {
+    margin: 10px 0px;
+}
+
+.hid-container {
+    display: none;
+}
+
+/* ###### COLORS ###### */
+
+.blue {
+    background-color: cadetblue;
+}
+
+/* ###### BUTTONS ###### */
+
+.anchor-button {
+    flex-wrap: wrap;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 15%;
+}
+
+.anchor-button:hover {
+    border: solid black 2px;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+
+.anchor-button:active {
+    border: solid black 2px;
+    background-color: grey;
+    color: white;
+}
+
+.answer-button {
+    flex-basis: 40%;
+    padding: 1em 0;
+    min-height: 2em;
+    min-width: 10em;
+}
+
+.nav-button {
+    height: 40px;
+    width: 40px;
+    margin: 10px 4px;
+}
+
+.selected-button {
+    border: solid black 2px;
+    background-color: grey;
+    color: white;
+}
+
+.unselected-button {
+    border: solid white 2px;
+    background-color: black;
+    color: white;
+}
+
+.start-button {
+    align-self: center;
+    padding: 1em 3em;
+    margin: 0.5em;
+}
+
+/* ###### CONTENT ###### */
+
+p {
+    text-align: center;
+}
+
+.question {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.media {
+    width: 100%;
+    height: auto;
+}
