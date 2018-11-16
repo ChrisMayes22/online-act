@@ -7,6 +7,7 @@ window.onload = function () {
     var cButton = document.getElementById("c");
     var dButton = document.getElementById("d");
     var eButton = document.getElementById("e");
+    var startButton = document.getElementById("startButton");
     var buttonArray = [aButton, bButton, cButton, dButton, eButton]
     var timerMinutes = document.getElementById("timer-minutes");
     var timerSeconds = document.getElementById("timer-seconds");
@@ -56,9 +57,17 @@ window.onload = function () {
     }
     
     function startQuiz() {
-        startContainer.style.display = "none";
-        quizContainer.style.display = "flex";
-        timer();
+        var pw = window.prompt("Please enter the password.")
+        if(pw === "learningisfun") {
+            startContainer.style.display = "none";
+            quizContainer.style.display = "flex";
+            timer();
+        } else {
+            var wrongPw = document.createElement("P");
+            document.getElementById("pwField").appendChild(wrongPw);
+            wrongPw.innerHTML = "I'm sorry, that is the wrong password.";
+            wrongPw.style.color = "red";
+        }
     }
     document.getElementById("startButton").addEventListener("click", startQuiz);
     
@@ -73,6 +82,7 @@ window.onload = function () {
         this.d = d; 
         this.e = e;
         this.chosenAnsw = false;
+        this.lessThanSix = false;
     }
     
     var questionOne = new TestItem("images/thirds-question.jpg", "e", "a) 12", "b) 15", "c) 27", "d) 54", "e) 81");
@@ -114,7 +124,7 @@ window.onload = function () {
     var questionFour = new TestItem("images/triangle-problem.jpg", "e", "a) 2(y + z) + x", "b) 2(x + y + z)", "c) 2(x + y)", "d) 2(x + z)", "e) 2(y + z)");
     var questionFive = new TestItem("images/trig-problem.jpg", "b", "a) 0 < a1 < a2", "b) 0 < a2 < a1", "c) a1 < 0 < a2", "d) a1 < a2 < 0", "e) a2 < a1 < 0");
     var questionSix = new TestItem("images/trig-identities.jpg", "c", "a) 0", "b) 1", "c) 2", "d) -tan(x)", "e) sin(2x)");
-    var questionSeven = new TestItem("images/value-of-b.jpg", "a", "a) 8", "b) -8", "c) -25", "d) -26", "e) 4 - 7√6");
+    var questionSeven = new TestItem("images/value-of-b.jpg", "a", "a) 8", "b) -8", "c) -25", "d) -26", "e) 4 - 7sqrt(6)");
     var questionEight = new TestItem("images/logarithm-problem.jpg", "d", "a) 3", "b) 21", "c) 72", "d) 125", "e) 243");
     var questionNine = new TestItem("images/pentagon-quadrilateral.jpg", "c", "a) 18", "b) 30", "c) 36", "d) 45", "e) 72");
     var questionTen = new TestItem("images/cube-problem.jpg", "e", "a) 9", "b) 18", "c) 27", "d) 36", "e) 54");
@@ -192,6 +202,12 @@ window.onload = function () {
                 mySpan.textContent = "INCORRECT";
                 feedbackPara.appendChild(mySpan);
                 mySpan.style.color = "red";
+                var myAnch = document.createElement("A");
+                myAnch.href = "https://www.ixl.com/math/algebra-2/find-trigonometric-ratios-using-the-unit-circle";
+                myAnch.innerHTML = "Click here to review";
+                var myBreak = document.createElement("BR");
+                feedbackPara.appendChild(myBreak);
+                feedbackPara.appendChild(myAnch);
             }
             feedbackContainer.appendChild(feedbackPara);
         }

@@ -125,7 +125,8 @@ body {
     flex-basis: 40%;
     padding: 1em 0;
     min-height: 2em;
-    min-width: 10em;
+    min-width: 7.5em;
+    align-content: stretch;
 }
 
 .nav-button {
